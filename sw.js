@@ -1,4 +1,4 @@
-const CACHE = 'vekt-v1';
+const CACHE = 'vekt-v2';
 const ASSETS = [
   './',
   './index.html',
