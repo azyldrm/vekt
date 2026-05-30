@@ -859,15 +859,14 @@ function skipTutorial(){
   try{localStorage.setItem('sf_tut','1');}catch(e){}
 }
 
-const _origInitAndStart=initAndStart;
 async function initAndStart(){
   let done=false;
   try{done=localStorage.getItem('sf_tut')==='1';}catch(e){}
+  await unlockAudio();
   if(!done){
-    await unlockAudio();
     showTutorial();
   } else {
-    await _origInitAndStart();
+    startGame();
   }
 }
 
